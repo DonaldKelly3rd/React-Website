@@ -31,12 +31,45 @@ function NavBar() {
     setIcon(icon === faBars ? faXmark : faBars);
   };
 
+  const [scrollData,setScrollData] = useState({
+    y: 0,
+    lastY: 0
+  })
+
+  const[showNav,setShowNav] = useState(false); 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollData(prevState => {
+        return {
+          y:window.scrollY,
+          lastY: prevState.y
+        }
+      })
+    }
+
+   window.addEventListener('scroll', handleScroll)
+
+   return() => window.removeEventListener('scroll', handleScroll)
+
+  }, [])
+
+  useEffect(() => {
+    console.log(scrollData);
+
+    if(scrollData.y > 150){
+      setShowNav(true);
+    } else{
+      setShowNav(false);
+    }
+  }, [scrollData])
+
   return (
     <>
-      <nav className='navbar hover'>
+      <nav className={showNav ? 'navBar hideNav' : 'navbar hover'}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Evora <FontAwesomeIcon icon={faHippo} size="l" />
+            Evora <FontAwesomeIcon icon={faHippo} size="lg" />
           </Link>
           <div className="menu-icon" onClick={toggleMenu}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
