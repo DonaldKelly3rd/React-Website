@@ -36,7 +36,7 @@ function NavBar() {
       <nav className='navbar hover'>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Evora <FontAwesomeIcon icon={faHippo} size="xl" />
+            Evora <FontAwesomeIcon icon={faHippo} size="l" />
           </Link>
           <div className="menu-icon" onClick={toggleMenu}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
