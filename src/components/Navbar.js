@@ -33,7 +33,7 @@ function NavBar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className='navbar hover'>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             Evora <FontAwesomeIcon icon={faHippo} size="xl" />
@@ -48,19 +48,19 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Fragrances"
+              <Link to="/fragrances"
                 className="nav-links" onClick={closeMobileMenu}>
                 Fragrances
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/Jewlery" className="nav-links" onClick={closeMobileMenu}>
+                to="/jewlery" className="nav-links" onClick={closeMobileMenu}>
                 Jewlery
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Reward-Program" className="nav-links-mobile" onClick={closeMobileMenu}>
+              <Link to="/reward-Program" className="nav-links-mobile" onClick={closeMobileMenu}>
                 Reward Program
               </Link>
             </li>
