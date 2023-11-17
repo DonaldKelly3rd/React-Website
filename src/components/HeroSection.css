@@ -4,18 +4,19 @@ video {
     height: 100%;
     position:fixed;
     z-index: -1;
+    overflow:hidden;
 }
 
 .hero-container{
-    /*background: url('/ReactPictures/Pink-purple-flowers.jpg') center center/cover no-repeat; */
-    height: 100vh;
+    height: 82vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.164);
     object-fit: contain;
+    
 }
 
 .hero-container > h1 {
@@ -38,6 +39,10 @@ video {
 .hero-btns .btn{
     margin: 6px;
 }
+
+
+
+
 
 @media screen and (max-width:960px) {
     .hero-container > h1 {
