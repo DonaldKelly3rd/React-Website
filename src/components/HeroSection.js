@@ -9,7 +9,7 @@ import './HeroSection.css';
 function HeroSection() {
 return (
     <div className = 'hero-container'>
-    <video src="/ReactVideos/pexels-cottonbro-studio-6491686-2160x4096-25fps.mp4" autoPlay loop muted></video>
+    <video src="/ReactVideos/pexels-cottonbro-studio-6491686-2160x4096-25fps.mp4" autoPlay loop muted></video> 
     <h1> ADVENTURE AWAITS</h1>
     <p>What are you waiting for?</p>
     <div className="hero-btns">
@@ -21,8 +21,12 @@ return (
     </div>
     </div>
 
-    /*Maybe another autoplay video under the top one or change to a model */
+
+
+          /*Maybe another autoplay video under the top one or change to a model */
 )
+
 }
 
 export default HeroSection
+
